@@ -1,8 +1,8 @@
-CONFIG_NAME: '3stages_color'
+CONFIG_NAME: 'coco_3stages_color'
 
-DATASET_NAME: 'church_outdoor'
-DATA_DIR: '../data/lsun'
-GPU_ID: '3'
+DATASET_NAME: 'train2014'
+DATA_DIR: '/content/drive/MyDrive/dataset/coco'
+GPU_ID: '0'
 WORKERS: 4  # 4
 
 
@@ -12,15 +12,15 @@ TREE:
 
 TRAIN:
     FLAG: True
-    NET_G: ''  # '../output/bedroom_3stages_color/Model/netG_epoch_1.pth'
+    NET_G: ''  # '../output/coco_3stages_color/Model/netG_epoch_1.pth'
     NET_D: ''  #
     BATCH_SIZE: 24
-    MAX_EPOCH: 50
+    MAX_EPOCH: 5
     SNAPSHOT_INTERVAL: 2000
     DISCRIMINATOR_LR: 0.0002
     GENERATOR_LR: 0.0002
     COEFF:
-      COLOR_LOSS: 50.0  # 20.0  # 1.0
+      COLOR_LOSS: 50.0   # 1.0
 
 
 GAN:
