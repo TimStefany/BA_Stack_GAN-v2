@@ -1,4 +1,4 @@
-
+from __future__ import print_function
 from six.moves import range
 
 import torch.backends.cudnn as cudnn
@@ -507,7 +507,7 @@ class GANTrainer(object):
             netG.eval()
             num_batches = int(cfg.TEST.SAMPLE_NUM / self.batch_size)
             cnt = 0
-            for step in range(num_batches):
+            for step in xrange(num_batches):
                 noise.data.normal_(0, 1)
                 fake_imgs, _, _ = netG(noise)
                 if cfg.TEST.B_EXAMPLE:

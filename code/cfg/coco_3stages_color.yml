@@ -1,7 +1,7 @@
 CONFIG_NAME: 'coco_3stages_color'
 
-DATASET_NAME: 'train2014'
-DATA_DIR: '/content/drive/MyDrive/dataset/coco'
+DATASET_NAME: 'coco'
+DATA_DIR: '/content/drive/MyDrive/coco'
 GPU_ID: '0'
 WORKERS: 4  # 4
 

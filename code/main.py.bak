@@ -1,4 +1,4 @@
-
+from __future__ import print_function
 import torch
 import torchvision.transforms as transforms
 
@@ -129,8 +129,8 @@ if __name__ == "__main__":
     elif cfg.DATA_DIR.find('coco') != -1:
         import torchvision.datasets as dset
         import torchvision.transforms as transforms
-        dataset = dset.CocoCaptions(root = '/content/drive/MyDrive/coco/train2014',
-                                    annFile = '/content/drive/MyDrive/coco/annotations/captions_train2014.json',
+        dataset = dset.CocoCaptions(root = '/root/dataset/coco/train2017',
+                                    annFile = '/root/dataset/coco/annotations/captions_train2017.json',
                                     transform=transforms.ToTensor())
     
     assert dataset
